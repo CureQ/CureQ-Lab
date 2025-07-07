@@ -155,6 +155,21 @@ An other project for the MEAlytics tool consisted of the 2 features: [Spike heat
 
 The [Microscopy GUI](https://github.com/CureQ/Microscopy) performs segmentation and statistical calculations on microscopy images. <br>The current main version provides the cell body detection application to analyze microscopy images and identify cell bodies in the provided samples.
 
+This project focuses on the selection and implementation of a suitable cell segmentation model for use
+ within the CureQ-Toolbox, an analysis tool for microscopy
+images in the context of Huntington's disease research. The goal
+ was to evaluate the accuracy and usability of various
+ segmentation approaches and integrate a model
+ that meets the needs of end users. The
+ results show that the Cellpose-SAM model, combined
+ with a preset diameter parameter, provides the best performance
+ in terms of segmentation quality and ease of use.
+ The model is locally deployable, requires no additional training and has
+ been successfully integrated into a desktop application with a graphical
+ user interface. This provides an efficient alternative
+to existing manual workflows, supporting the analysis of
+ microscopic data within the CureQ consortium.
+
 <!-- Microscopy GUI images -->
 <!-- Table Image styling for multiple images near eachother -->
 <table>
@@ -182,7 +197,14 @@ The Microscopy tool also has a few other brances, which has not yet been merged 
 
 ### Aggregate quantification
 
-[Aggregate quantification](https://github.com/CureQ/Microscopy/tree/Aggregate_Detection/Aggregate_Detection)
+The [Aggregate quantification](https://github.com/CureQ/Microscopy/tree/Aggregate_Detection/Aggregate_Detection) project presents an image
+ processing-based methodology for the segmentation and quantification of neural aggregates in microscopy images of HD-affected
+ cells. First, cell structures are segmented using advanced image
+ analysis techniques. Then, neural aggregates are identified by applying a predefined intensity threshold and evaluating their size,
+ position, and count. The proposed approach enables automated,
+ reproducible quantification of neural aggregates and provides a
+ practical tool for analyzing cellular phenotypes associated with
+ HD.
 
 <p align="center">
   <a href="https://github.com/CureQ/Microscopy/tree/Aggregate_Detection/Aggregate_Detection">
@@ -196,7 +218,24 @@ The Microscopy tool also has a few other brances, which has not yet been merged 
 
 ### Colocalization
 
-[Colocalization](https://github.com/CureQ/Microscopy/tree/Colocalization/Colocalization)
+The [Colocalization](https://github.com/CureQ/Microscopy/tree/Colocalization/Colocalization) project presents an automated pipeline to quantify and
+ map colocalization between themolecular chaperone CCT1
+ and mutant Huntingtin (mHTT) aggregates in 3D fluorescence
+ microscopy images. Robust spatial quantification of CCT1
+ at mHTT inclusions has previously been lacking, limiting
+systematic analysis of CCT1–mHTT colocalization. To address this, a transparent, GUI-driven pipeline was developed
+ that combines statistical segmentation with intensity-based
+ enrichment analysis. The pipeline processes multi-channel z-stack images, segments mHTT aggregates using voxel-based
+ masks, and quantifies the spatial relationship between CCT1
+ and mHTT through complementary colocalization and enrichment metrics. Validation was performed on expert-annotated
+ microscopy data, with visual overlays ensuring biological
+ plausibility of automated outputs. Results suggest a significant enrichment of CCT1 at mHTT aggregation sites in
+ the analyzed dataset. The pipeline produces reproducible and
+ interpretable outputs, providing a flexible and user-friendly
+ alternative to previously manual, labor-intensive, and subjective workflows. Its modular architecture supports integration
+ of future AI models and enables scalable, high-throughput
+ analysis of CCT1–mHTT interactions in evolving microscopy
+ datasets.
 
 <p align="center">
   <a href="https://github.com/CureQ/Microscopy/tree/Colocalization/Colocalization">
@@ -222,7 +261,22 @@ In our CureQ lab at the Amsterdam University of Applied Sciences (AUAS), we also
 
 ### Cardiovascular Risk
 
-[Cardiovascular Risk](https://github.com/CureQ/Cardiovascular-Risk)
+
+The [Cardiovascular Risk](https://github.com/CureQ/Cardiovascular-Risk) project focuses on developing an explainable AI
+ tool to predict individual cardiovascular disease (CVD) risk based
+ on clinical data, designed for use in the Health Checkpoints
+ (HCPs) initiative in Amsterdam. Using the Cleveland dataset,
+ multiple machine learning models were evaluated. Logistic regression achieved the best performance (ROC AUC = 0.936,
+ recall = 0.81) and offered the highest interpretability for practical
+ deployment. SHAP analysis revealed that dynamic stress related
+ variables, such as ST depression (oldpeak), exercise induced
+ angina (exang), and chest pain type, were the most influential predictors, surpassing traditional risk factors like age and
+ cholesterol. The prototype was co designed with health students
+ and integrates into existing workflows, enabling fast, transparent
+ risk feedback. This study demonstrates that explainable AI is
+ both feasible and valuable in community-based preventive care,
+ provided it is user-centered and embedded in responsible human
+ oversight.
 
 <!-- Cardiovascular Risk images -->
 <!-- Table Image styling for multiple images near eachother -->
@@ -249,7 +303,38 @@ In our CureQ lab at the Amsterdam University of Applied Sciences (AUAS), we also
 
 ### HybriCheX
 
-[HybriCheX](https://github.com/CureQ/HybriChex)
+Chest X-ray (CXR) imaging is a widely used diagnostic tool for detecting thoracic pathologies. However, in
+terpretation remains challenging due to subtle abnormalities
+ or variability in anatomical structures leading to potential
+ perceptual and cognitive errors by radiologists. Deep learning models, particularly Convolutional Neural Networks, have
+ demonstrated strong performance in automated Chest X-ray
+ analysis. While Convolutional Neural Networks excel at local
+ feature extraction, they lack a holistic understanding of the entire
+ image, limiting their effectiveness in comprehensive diagnosis.
+ Vision Transformers offer a solution by leveraging self-attention
+ mechanisms to analyze both local and global image contexts.
+ However, traditional Vision Transformers face limitations, for
+ example their fixed patch sizes, which may lead to suboptimal
+ feature representation. 
+ 
+ The [HybriCheX](https://github.com/CureQ/HybriChex) project investigates the effectiveness of
+ a hybrid CNN-Swin Transformer model for thoracic pathology
+ classification. The proposed approach combines the strengths
+ of CheXNet, a CNN-based model, for local feature extraction
+ and the Swin Transformer based on the SwinCheX architecture
+ for hierarchical global context analysis. The model is evaluated
+ against the existing hybrid CNN-ViT model CheXViT, which uses
+ a regular Vision Transformer instead of a Swin Transformer.
+ The goal is to determine whether the incorporation of a Swin
+ Transformer improves classification performance. Key factors
+ such as dataset selection, model optimization, explainability,
+ computational efficiency, and integration into a user-friendly
+ interface are explored. The research aims to provide insights
+ into the advantages of a hybrid approach in medical CXR image
+ analysis, balancing computational efficiency with diagnostic accuracy. Findings from this study can contribute to the development
+ of robust AI-assisted diagnostic tools, potentially improving
+ clinical decision-making and reducing radiologic errors in CXR
+ interpretation.
 
 <!-- HybriCheX images -->
 <!-- Table Image styling for multiple images near eachother -->
@@ -276,8 +361,33 @@ In our CureQ lab at the Amsterdam University of Applied Sciences (AUAS), we also
 
 ### Low Light Image Enhancement
 
-[Low Light Image Enhancement](https://github.com/CureQ/LLIE)
+The [Low Light Image Enhancement](https://github.com/CureQ/LLIE) research investigated the extent to which low-light
+ image enhancement (LLIE) techniques can contribute to
+ the improvement of fall detection performance in dark environments
+ within Alderli's existing system, an AI-supported
+ fall detection system for vulnerable populations. Fall detection in
+ poor lighting conditions poses a challenge for reliability
+and safety, in part because of the limited quality
+ of images produced by infrared cameras in dark
+ situations. Several LLIE methods, both traditional and
+ deep learning-based, have been evaluated for their effect on the
+ performance of Alderli's fall detection model. Despite the fact that the deep
+ learning models are suitable for an edge implementation and show
+ potential at a low detection threshold, none of the
+ LLIE techniques proved to be able to actually
+improve the system at the stated requirement (a
+ detection threshold of 0.5). In addition, it was investigated whether fine-tuning LLIE
+models with Alderli's own data could lead to better performance,
+ but this did not yield a desired improvement. The results
+ suggest that under current conditions, including
+ camera quality, amount of data and system architecture,
+ LLIE does not provide a suitable solution. Further gains may be
+ possible by improving the hardware and collecting a
+ more representative data set.  Until then, gamma correction remains the
+ most effective enhancement in dark conditions, but
+ without offering an improvement on the original implementation.
 
+<!-- LLIE images -->
 <p align="center">
   <a href="https://github.com/CureQ/LLIE">
     <img src="./images/LLIE_Dark_Examples.png" alt="Low Light Image Enhancement - Raw Dark Examples" style="max-width: 100%;">
