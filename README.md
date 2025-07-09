@@ -1,10 +1,21 @@
 <!-- CureQ logo -->
-<a href="https://cureq.github.io/CureQ/">
+<a href="https://cureq.nl/">
     <img src="./images/CureQ_logo.jpg" alt="MEAlytics logo" width=200px>
 </a>
 
 # CureQ-Lab
+
+Welcome to the CureQ Lab main page!
+
+In the CureQ Lab, we develop tools to analyse biological data.
+
 This repository contains [libraries for the CureQ consortium](#cureq-projects) and [research projects of the AUAS CureQ Lab](#other-auas-projects), which are developed as part of the Applied Artificial Intelligence (AI) master thesis and the Biomedical Engineering (BMT) bachelor thesis at the Amsterdam University of Applied Sciences (HvA).
+
+Furthermore, students from the Master of Applied Artificial Intelligence completed an [AI-Lab assignment](#ai-lab-assignments) to design and develop smart and affordable solutions for healthcare with Edge technology (Tiny Machine Learning). These solutions with associated User Manuals can be integrated into educational teaching.
+
+1. [CureQ projects](#cureq-projects)
+2. [CureQ Lab projects](#other-auas-projects)
+3. [AI-Lab assignment](#ai-lab-assignments)
 
 ## CureQ projects
 
@@ -22,7 +33,7 @@ We have made <i>2</i> GUI's for projects regarding the CureQ consortium.
 
 ### MEAlytics
 
-[MEAlytics](https://github.com/CureQ/CureQ) is a python package for analyzing Micro-electrode Array (MEA) experiments. This package offers high speed spike, burst and network burst detection followed by feature extraction. <br>The whole analysis tool is implemented in a Graphical User Interface (GUI). This GUI is used to inspect the raw MEA data and the analysis results. A few examples about the spike detection, burst detection and feature extraction can be found below &darr;
+[MEAlytics](https://github.com/CureQ/CureQ) is a python package for analyzing Micro-electrode Array (MEA) experiments. MEA experiments measure the electrical activity of neuron cells through dozens of electrodes simultaneously. The MEAlytics package offers high speed spike, burst and network burst detection followed by feature extraction. <br>The whole analysis tool is implemented in a Graphical User Interface (GUI). This GUI is used to inspect the raw MEA data and the analysis results. A few examples about the spike detection, burst detection and feature extraction can be found below &darr;
 
 <!-- MEAlytics images -->
 <!-- Table Image styling for multiple images near eachother -->
@@ -107,9 +118,9 @@ An other project for the MEAlytics tool consisted of the 2 features: [Spike heat
 <!-- Table Image styling for multiple images near eachother -->
 <table>
   <tr>
-    <td align="center" width=50%>
+    <td align="center" width=49.2%>
       <a href="https://github.com/CureQ/CureQ/blob/Lucas/docs/heatmap.md">
-        <img src="./images/Heatmap.png" alt="Heatmap animation - Activity of each electrode">
+        <img src="./images/Spike_activity_heatmap_10_sec.gif" alt="Heatmap animation - Activity of each electrode">
       </a>
       <br/>
       <sub>Heatmap animation - Activity of each electrode</sub>
@@ -445,3 +456,7 @@ models with Alderli's own data could lead to better performance,
     </td>
   </tr>
 </table>
+
+<br><br>
+
+## AI-Lab assignments
